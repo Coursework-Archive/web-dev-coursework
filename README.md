@@ -12,3 +12,5 @@ This repository includes HTML, CSS, JavaScript, and TypeScript coursework, along
 - DOM Manipulation
 - Single-page applications
 - Client-side scripting
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
