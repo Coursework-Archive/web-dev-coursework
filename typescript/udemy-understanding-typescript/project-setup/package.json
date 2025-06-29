@@ -1,0 +1,23 @@
+{
+  "name": "project-setup",
+  "version": "1.0.0",
+  "description": "stting up first commit",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "typescript"
+  },
+  "keywords": [
+    "typestript"
+  ],
+  "author": "brittany",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.9.4"
+  }
+}

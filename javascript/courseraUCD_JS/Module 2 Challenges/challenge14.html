@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript Basic Challenges: Challenge 14</title>
+</head>
+<body>
+    <h1>JevaScript Basic Challenges</h1>
+    <h2>Challenge 14</h2>
+    <script>
+        function hello(name) {
+            var greeting = "";
+            if (name == null || name == '' || name == 'null') {
+                greeting = "You didn't give me your name";
+                return greeting; 
+            }
+            else {
+                greeting = "Hello " + name + " welcome!";
+                return greeting; 
+            }
+
+
+        }
+
+        var name = prompt("Please, enter your name", "");
+        console.log(hello(name));
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿#buttons{
+    margin:100px 0 100px 0;
+}
+
+#buttons input{
+    width:120px;
+}
+
+#buttons input:last-child{
+    position:absolute;
+    top:20px;
+    left:100px;
+}
+
+#figure1{
+    width:400px;
+    float:left;
+    margin:px;
+}
+
+.clear{
+    clear:right;
+}
+
+.temp{
+    position:relative;
+    top:50px;
+    left:20px;
+}

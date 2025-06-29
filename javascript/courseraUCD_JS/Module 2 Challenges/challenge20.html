@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>DOM Challenges</title>
+    <style>
+        body{ font-family: Arial; line-height: 1.5em; } main{ padding: 20px; max-width: 800px; margin: auto; } .blue { color: blue; }
+            .red{ color:red; } .big{ font-size: 2em; } img{ float: left; margin-right:10px; } article{ overflow: hidden; }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+
+            <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Page Title</font></font></h1>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Some basic information about this page.</font></font></p>
+
+        </header>
+
+        <article id="one">
+            <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Article Title</font></font></h2>
+            <p class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Today's Date</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">It is very important for the customer to pay attention to the adipiscing process. </font><font style="vertical-align: inherit;">The advantage of the accusers is that any pleasure is further hindered by the guilt of their duties.</font></font></p>
+            <blockquote>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">
+                        "You're off to great places, today is your day. Your mountain is waiting, so get on your way."
+                    </font>
+                </font><footer><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Dr. </font><font style="vertical-align: inherit;">Seuss</font></font></footer>
+            </blockquote>
+            <p><img src="http://meadpoint.net/images/sillyajax.jpg" alt="Ajax"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">It is very important for the customer to pay attention to the adipiscing process. </font><font style="vertical-align: inherit;">Do you accept, pain? </font><font style="vertical-align: inherit;">That they provide the smallest pleasure, but the option, </font></font><a href="http://google.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">which further</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> interferes with their duties, will result in fewer pleasures, and a blissful yielding to necessities.</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">It is very important for the customer to pay attention to the adipiscing process. </font><font style="vertical-align: inherit;">We take the blame from the times of pain and resilience. </font><font style="vertical-align: inherit;">As for that one, no, we take it to ourselves, those present do not know the manners, the conveniences of the wise man, where else to flee from!</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">It is very important for the customer to pay attention to the adipiscing process. </font><font style="vertical-align: inherit;">Or those who are corrupt, because it is all error, they never provide for us where they do not know the great ones, indeed, we can be softened by our pleasures, blinded whence they fall.</font></font></p>
+        </article>
+
+        <article id="two">
+            <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Article Title</font></font></h2>
+            <p class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Today's Date</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">It is very important for the customer to pay attention to the adipiscing process. </font><font style="vertical-align: inherit;">For the free man refuses the pleasure, the great do not know that those who are bound by pains are bound by labor, but those who are hindered by debt, </font></font><a href="http://google.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">neither choice nor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> pleasure, should anyone please but trouble?</font></font></p>
+            <blockquote>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">
+                        "You're braver than you believe, and stronger than you seem, and smarter than you think."
+                    </font>
+                </font><footer><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">—AA Milne</font></font></footer>
+            </blockquote>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">It is very important for the customer to pay attention to the adipiscing process. </font><font style="vertical-align: inherit;">They cut him down, the </font></font><a href="https://en.wikipedia.org/wiki/Llama"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ways of him except those</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> . </font><font style="vertical-align: inherit;">He hates to be rejected, he is hindered by everything, I will explain the rejection, it is a mistake, these duties of life that fall!</font></font></p>
+        </article>
+
+        <footer>
+            <p id="copyright"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">copyright info</font></font></p>
+        </footer>
+    </main>
+
+    <script>
+
+        var image = document.querySelector('#one img');
+        image.setAttribute('src', 'http://meadpoint.net/images/xmasajax.jpg');
+
+        var secArticlePs = document.querySelectorAll('#two p');
+        for (var i = 0; i < secArticlePs.length; i++) {
+            secArticlePs[i].className = "blue";
+        }
+
+    </script>
+</body>
+</html>

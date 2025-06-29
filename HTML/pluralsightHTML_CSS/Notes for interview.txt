@@ -1,0 +1,28 @@
+Charlotte, NC
+Chandler, AZ
+San Fracisco, CA
+New York Metro Area 
+
+
+
+1. Turn on water 
+2. get hands wet 
+3. get soap,
+4. rub hands 
+5. rinse hands
+6. turn off water 
+7. dry hands 
+
+
+How to create entry fields: https://www.tutorialrepublic.com/html-tutorial/html-forms.php
+created an entry field saw that it worked and roughly remembered that  I can modify the font and size of the text preceding the entry now I needed to find out how to create an output tble
+How to create output table: https://www.encodedna.com/javascript/how-to-save-form-data-in-a-text-file-using-javascript.htm
+How to run JS in jupyter: https://www.youtube.com/watch?v=DTco1nTTlzE - found I was adding multiple calls to html https://stackoverflow.com/questions/39064293/jupyter-notebook-html-rendered-in-one-cell-messes-up-html-rendered-in-another
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date
+
+fitting in the boundries, skipped beginning with I E M 
+trouble with other option 
+TROUBLE WITH DATE 
+
+
+http://bluegalaxy.info/codewalk/2017/12/04/javascript-how-to-install-javascript-kernel-in-jupyter-notebook/

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Events</title>
+</head>
+<body>
+    
+    <h1>JavaScript Events</h1>
+    <button>Don't Press Me!</button>
+    
+    <script>
+        /***************Capturing Events with JavaScript*******************/
+        
+        var btn = document.querySelector('button');
+
+        function ouch() {
+            alert("oh no you didn't");
+        }
+        /*
+        btn.onclick = ouch; //if ouch() was there instead the function would run on refresh
+
+        /* Can also be done this way too
+        btn.onclick = function () {
+            alert("Do not press me");
+        }
+        */
+
+        /****************Event Listeners**************************************/
+
+        //btn.addEventListener('click', ouch);
+
+        btn.addEventListener('click', function () {
+            alert("Oh, now you did it. :(");
+        });
+
+    </script>
+
+</body>
+</html>

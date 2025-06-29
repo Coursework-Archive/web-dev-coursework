@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Functions in JavaScript</h1>
+
+    <script>
+        
+        function doStuff() {
+            var myString = "Here is a string of text";
+            var upperString = myString.toUpperCase();
+            console.log(myString);
+            console.log(upperString);
+
+        }
+        
+        //window.doStuff();
+        
+
+        /*****************Challenge #7 Function***********************/
+        
+        function howBig(num) {
+
+            if (num < 10) {
+                console.log(`You entered a number less than 10`);
+                for (var i = 0; i < 10; i++) {
+                    console.log(`Here is a ${i}`);
+                }
+            }
+            else if (num > 9) {
+                console.log(`You entered a big number`);
+            }
+            else {
+                console.log(`ERROR: You entered something other than a number!`);
+            }
+
+        }
+
+        //var num = prompt("Enter a whole number", "");
+        //howBig(num);
+       
+        function upperMessage(message) {
+            var upper = message.toUpperCase();
+            console.log(upper);
+        }
+
+        function addNums(num1, num2) {
+            var sum = num1 + num2;
+            console.log(sum);
+        }
+
+        //addNums(4, 3);
+
+        function returnSum(num1, num2) {
+            var sum = num1 + num2;
+            return sum;
+        }
+
+        //console.log(returnSum(3, 5));
+
+        //console.log(Math.random()); //16 digit decimal
+        /*************Useful Example*************/
+        function randomInt(min, max) {
+            var numOfValues = max - min + 1;
+            var randomNum = Math.random();
+            var randomVal = randomNum * numOfValues;
+            var roundedRandomVal = Math.floor(randomVal);
+            var finalNum = min + roundedRandomVal;
+
+            return finalNum;
+        }
+
+
+
+        //randomInt(5, 10);
+
+
+        /***********better example *****************/
+        function sRand(min, max) {
+            //creating a random integer from min and max
+            return Math.floor( (max - min + 1) * Math.random()) + min;
+        }
+
+
+        var foods = ["cheese", "chicken", "grapes", "hamburgers"];
+
+        //console.log(foods[sRand(0, 3)]);
+
+        /**************** More on Functions *************************/
+
+        var greeting = function () {
+            console.log("Hello from the function!");
+        }
+
+        //greeting();
+        
+        //Arrow function expression
+        //var capitalizeArrow  anyString => anyString.toUpperCase();
+
+
+    </script>
+
+</body>
+</html>

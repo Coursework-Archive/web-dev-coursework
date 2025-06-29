@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript Basic Challenges: Challenge 15</title>
+</head>
+<body>
+    <h1>JevaScript Basic Challenges</h1>
+    <h2>Challenge 15</h2>
+    <script>
+        /*works but didn't follow instructions
+        function hello(name) {
+            console.log("here")
+            if (name == null || name == '' || name == 'null') {
+                var greeting = "";
+                console.log("gets here")
+                greeting = "You didn't give me your name";
+                return greeting; 
+            }
+            else {
+                var text = "";
+                var foods = ["Ribeye", "Filet Mignon", "Halal Lamb Chops", "Oven Roasted Half Chicken"];
+                var i = 0;
+                while (i < foods.length) {
+                    text += `Hello ${name} would you like ${foods[i]} \n`;
+                    i++;
+                }
+                return text; 
+            }
+        }
+
+        var name = prompt("Please, enter your name", "");
+        console.log(hello(name));
+            */
+        function hello(name) {
+            var greeting = "";
+            if (name == null || name == '' || name == 'null') {
+                greeting = "You didn't give me your name";
+                return greeting;
+            }
+            else {
+                greeting = "Hello " + name + " welcome!";
+                return greeting;
+            }
+
+
+        }
+
+        function hospitality(name, gift) {
+            if (name == null || name == '' || name == 'null') {
+                console.log(hello(name));
+            }
+            else {
+                for (var foo of gift) {
+                    var name1 = hello(name)
+                    console.log(`${name1}, would you like some ${foo}?`);
+                }
+            }
+        }
+
+        var foods = ["Ribeye", "Filet Mignon", "Halal Lamb Chops", "Oven Roasted Half Chicken"];
+        var response = prompt("Please, enter your name", "");
+        hospitality(response, foods);
+
+    </script>
+   
+</body>
+</html>

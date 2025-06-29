@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS for Beginners</title>
+</head>
+<body>
+    <h1>Script Basics</h1>
+
+    <script>
+
+        // the variable is below
+        var hello = "Good morning Brittany!";
+        console.log(hello);
+
+        /* I can put a longer commment about anything that I want
+         * and it can go multiple lines */
+		 // 0, False, undefined, and NAN are all Falsey
+		 // all other numbers and strings are Truey 
+        
+		/************** Booleans and selections *****************/ 
+		/*
+		var red = true;
+		var blue = false; 
+		var green; // this is undefined, and will resolve as false
+		var myNum = 5;
+		var otherNum = 10;
+		var notNum = "chicken"; 
+		// === an operator that compares two values to be the exact same
+		var myValue = notNum - myNum;
+		
+		if(myValue){
+			console.log("The statement is true");
+		}
+		else{
+			console.log("The statement is false");
+			console.log(myValue);
+		}
+		*/
+		
+		
+	
+		var colors = ["red", "blue", "green", "yellow", "orange", "purple"];
+		var selectedColor = colors[0];
+		/************************Else If ***********************/
+		/*
+		if(selectedColor === "red"){
+			console.log("The color is red");
+		}
+		else if(selectedColor === "blue"){
+			console.log("The color is blue");
+		}
+		else{
+			console.log("The color is yellow");
+		}
+		*/
+		
+		/*********************Switch*******************************/
+		/*
+		switch(selectedColor){
+			case "red": console.log("the color is red");
+				break;
+			case "blue": console.log("the color is blue");
+				break;
+			case "green": console.log("the color is green");
+				break;
+			case "yellow": console.log("the color is yellow");
+				break;
+			default: console.log("There was an error");
+		}
+		*/
+		
+		/*********************Using && ***********************/
+		/*
+		var goodMood = 1;
+		var gotSleep = 1;
+		
+		//check if both are true
+		if(goodMood && gotSleep){
+			console.log("Today is a good day");
+		}
+		else{
+			console.log("I am grumpy");
+		}
+		*/
+        /*********************Using || ***********************/
+		//check if any of the statements are true
+		/*
+        var gotBreakfast = 0;
+		var gotLunch = 0;
+		var gotDinner = 0;
+
+        if (gotBreakfast || gotLunch || gotDinner) {
+            console.log("I am not starving");
+        }
+        else {
+            console.log("STARVING!");
+        }
+		*/
+
+		/*****************For Loop**********************/
+		// i++ is the same as i+1
+		/*
+		for (var i = 1; i <= 10; i++) {
+			console.log(i);
+        }
+		*/
+
+		/*****************Working with arrays**************/
+		/*
+		for (var i = 0; i < colors.length; i++) {
+			console.log(colors[i]);
+		}
+		*/
+		/****************The For .. Of Loop******************/3
+		/*
+		var food = ["grapes", "cheese", "bread", "olives"];
+
+		for (var eachItem of colors) {
+			console.log(eachItem);
+        }
+		*/
+
+		/*********************String as Arrays ***********************************/
+		/*
+		var statement = "A string can be treated like an array";
+
+		for (var i = 0; i < statement.length; i++) {
+			console.log(statement[i]);
+		}
+
+		for(var eachLetter of statement){
+			console.log(eachLetter);
+		}
+		*/
+		/********************While Loops*******************************/
+		/*
+		var incrementor = 0;
+		var text = "";
+		/*
+		while (incrementor < 10) {
+			text += "The incrementor has gone up to " + incrementor + "\n";
+			incrementor++;
+		}
+
+		console.log(text);
+		*/
+
+		/**************************Template Literals ************************/
+		// Using backticks in JavaScript along with ${} allows you to embed them in your strings
+		/*
+		while (incrementor < 10) {
+			text += `The incrementor has gone up to ${incrementor} \n`;
+			incrementor++;
+        }
+
+		console.log(text);
+		*/
+
+		//Second Example
+		/*
+		var i = 0;
+
+		while (i < 10) {
+			text += `The incrementor is ${i}, and squared it is ${i * i} \n`;
+			i++;
+		}
+
+		console.log(text);
+		*/
+
+		/*****************************Structured Programming Sequence Part 1 *****************************/
+		/*
+		var myString = "I am really hungry for some";
+		console.log(myString);
+		var myUpperString = myString.toUpperCase();
+		console.log(myUpperString);
+		*/
+        /*****************************Structured Programming Sequence Part 2 *****************************/
+		/*
+		var reallyLocation = myString.search('really');
+		var specialWord = myString.substr(reallyLocation, 6);
+		specialWord = specialWord.toUpperCase();
+		var newString = myString.replace('really', specialWord);
+		console.log(newString);
+		*/
+        /*****************************Structured Programming Sequence Part 3 *****************************/
+		// Loops
+		var food = ["cake", "ice cream", "cherry sundea", "chocolate cocoa"];
+		var text = "";
+		myString = "I am going to eat a";
+        var i = 0;
+		/*
+		console.log(`${myString} ${food[1]}`);
+
+        for (var i = 0; i < food.length; i++) {
+            console.log(`${myString} ${food[i]}`);
+        }
+
+		for (var foo of food) {
+			console.log(`${myString} ${foo}`);
+		}
+
+		
+        while (i < food.length) {
+            text += `I will have ${food[i]} \n`;
+            i++;
+        }
+
+        console.log(text);
+		*/
+
+		//Loop + Selection
+		/*
+		while (i < food.length) {
+			if (i % 2 === 0) {
+				text += `I will have ${ food[i].toUpperCase() } \n`;
+			}
+			else {
+				text += `I will have ${ food[i] } \n`;
+			}
+			i++;
+		}
+		console.log(text);
+	
+
+		for (var i = 0; i < food.length; i++) {
+			if (i % 2 === 0) {
+                console.log(`${ myString } ${ food[i].toUpperCase() }`);
+            }
+            else {
+                console.log(`${ myString } ${ food[i] }`);
+            }
+        }
+		*/
+	
+		/*****************************Functions*******************************/
+
+    </script>
+
+</body>
+</html>

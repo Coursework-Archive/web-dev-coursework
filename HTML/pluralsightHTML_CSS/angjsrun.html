@@ -1,0 +1,144 @@
+<!-- GoalKicker.com – AngularJS Notes for Professionals 8 -->
+<!-- Section 1.1: Getting Started -->
+
+
+
+<!DOCTYPE html>
+<!-- ng-app directive is used to define the HTML document as an Angular application-->
+<html ng-app>
+<head>
+ <title>Hello, Angular</title>
+ <!-- Below is a content delivery network (CDN) also called 
+ content distribution network, it is a group of geographically
+ distributed and interconnected servers. They provide cached 
+ internet content from a network location closes to a user 
+ to speed up its delivery-->
+ <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+</head>
+<!--initialize the name variable using ng-init, this is used for 
+demonstrative and testing purposes only. When building an actual 
+application, controllers should initialize the data.
+The next 3 steps establish the two way data-binding, changes made to 
+the input update the model, which is reflected in the view-->
+<body ng-init="name='World'">
+ <label>Name</label>
+ <!--Bind data from the model to view on HTML controls. Bind an 
+ <input> to the name poperty with ng-model.-->
+ <input ng-model="name" />
+ <!--Display content from the model using double braces "{{ }}"-->
+ <span>Hello, {{ name }}!</span>
+ <p ng-bind="name"></p>
+</body>
+</html>
+
+<!-- if you use handle bars there is a chance that you see Hello, {{name}}
+as the page loads before the expressiion is resolved (before the data)
+is loaded-->
+
+<!-- if you use ng-bind, it will only show the data when the name is 
+resolve. As an alternative the directive ng-cloak can be used to 
+prevent handlebars to display before compiled -->
+
+
+
+
+
+<!-- Section 1.2: Showcasing all common Angular constructs -->
+
+<!DOCTYPE html>
+<!-- 
+ngApp directive bootstraps the application and tells angular that 
+DOM(Document Object Model) is controlled by a specific angulalr.model 
+named "myDemoApp 
+-->
+<html ng-app="myDemoApp">
+	<head>
+		<style>.started { background: gold; }</style>
+		<!-- angular.min.js is bootstrapped to access the AngularJS library -->
+		<script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+		<script>
+			function MyDataService() {
+				return {
+					getWorlds: function getWorlds() {
+						return ["this world", "another world"];
+						}
+					};
+				}
+				
+				function DemoController(worldsService) {
+					var vm = this;
+					vm.messages = worldsService.getWorlds().map(function(w) {
+						return "Hello, " + w + "!";
+					});
+				}
+				
+				function startup($rootScope, $window) {
+					$window.alert("Hello, user! Loading worlds...");
+					$rootScope.hasStarted = true;
+				}
+				
+				<!--angulalr.module(...) used with an array as the second argument//-->
+				<!--creates a new module. This array is used to supply a list of//-->
+				<!--module dependencies. In this example we chain calls on the//-->
+				<!--result of the modulel(...) function//-->
+				<!--module dependencies are classes, archives, libraries and resources//-->
+				<!--that your module file references//-->
+				angular.module("myDemoApp", [/* module dependencies go here */])
+				
+				<!--creates an Angular Service and returns the module for chaining//-->
+				<!--objects that are wired together using dependency injection (DI)//-->
+				.service("worldsService", [MyDataService])
+				
+				<!--creates an Angulalr Controller and returns the module for chaining//-->
+				<!--a Controller is defined by a JavaScript constructor functiosn that is//-->
+				<!--that is used to augment the AngularJS Scope//--> 
+				.controller("demoController", ["worldsService", DemoController])
+				
+				<!--use this method to register work wich needs to be performed on module//-->
+				<!--loading//-->
+				.config(function() {
+					console.log('configuring application');
+				})
+				
+				<!--makes sure code is run at startup time and takes an array of items as a //-->
+				<!-- parameter. Use this method to register work which should be performed //-->
+				<!-- when the injector is done loading all modules//-->
+				
+				<!-- 1st item is letting Angular know that the startup function requires //-->
+				<!-- "$rootScope" is being identified as the root and all others are decedents//-->
+				<!-- scope provides a separation between the model and the view, via a mechanism//-->
+				<!--for watching the model for changes. They also provide event emission/broadcast//-->
+				<!--and subscription facility//-->
+				
+				<!-- 2nd item is letting Angular know that the startup function requires //-->
+				<!-- "$window" is globally available in JavaScript and can cause problems //-->
+				<!-- using it as a service allows it to be overridden, removed or mocked for testing //-->
+				.run(["$rootScope", "$window", startup]);
+		</script>
+	</head>
+	<!-- 
+	ng-class is the ngClass directive to set a dynamic class, and in this example utilizes hasStarted 
+	on the $rootScope dynamically.
+	ng-cloak is a directive to prevent the unrendered Angular html template (e.g. "{{ msg }}") to 
+	be briefly shown before Angulalr has fully loaded the application. 
+	-->
+	<body ng-class="{ 'started': hasStarted }" ng-cloak>
+		<!--
+		ng-controller is the directive that asks Angular to instantiate a new controller of specific name to 
+		orchestrate that part of the DOM;
+		-->
+		<div ng-controller="demoController as vm">
+			<ul>
+				<!-- 
+				ng-repeat is the directive to make Angular iterate over a collection and clone a DOM 
+				template for each item;
+				{{ msg }} showcases interpolation: on-the-spot rendering of a part of the scope or 
+				controller
+				-->
+				<li ng-repeat="msg in vm.messages">{{ msg }}</li>
+			</ul>
+		</div>
+	</body>
+</html>
+
+

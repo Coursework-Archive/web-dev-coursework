@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheet2.css" type="text/css" />
+</head>
+<body>
+    <div class="MainColumn">
+        <h1>Post Your HTML in a Box</h1>
+        <p>
+            Scott Allen | July 1, 2010
+        </p>
+        <div id="buttons">
+            <input name="b1" value="button 1" />
+            <input name="b2" value="button 2" />
+            <input name="b3" value="button 3" />
+        </div>
+        <p class="temp">
+            The first step in understanding how to position elements is to understand the fundamentals model of CSS-the box model.
+        </p>
+        <h2>The Box Model</h2>
+        <p>
+            Every element you place on a page creates a box. You cannot alway see the boundries and the borders of the boxes you create, but the boxes are there. A <em>div</em> element creates a box, as do <em>h1,img,span</em>, and <em>td</em> elements. Each box has properties you can set with CSS. I've illustrated some of these properties in Figure 1.
+        </p>
+        <p>
+            <img id="figure1" align="left" src="../../Pictures/IMG_0660.jpg" alt="Sea Life" />
+        
+            <strong>Figure 1 Border, padding, and margin</strong>
+        </p>
+        <div class="clear" />
+        <p>
+            The <em>padding</em> of a box is the distance between the content of the box and the box's border, and the margin in the distance between a box and any adjacent element. In other words, padding adds space inside the border, while a margin adds space outside the border. In the fllowing CSS, I se both the padding and the margin to a distance of 10 pixels. This is why youo can set so much white space in Figure 1.
+        </p>
+        <p>
+            The border surrounding every element is not visible by default, but by using CSS I can change the color of an element's border, as well as the thickness and line style the browser uses when drawinng the border. What you see in Figure 1 is the result of a style rule telling the browser to draw a solid thin, red line around the box that each div element creates. 
+        </p>
+    </div>
+</body>
+</html>

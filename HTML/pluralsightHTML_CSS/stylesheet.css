@@ -1,0 +1,200 @@
+/* Cascading Style Sheets Formating Elements
+Use CSS to style tables not data, control spacing, borders padding, etc. 
+CSS Specifications http://www.w3.org/Style/CSS/
+Is CSS supported in the browser http://www.quirkmode.org/css/contents.html
+Full Property Table http://www.w3.org/TR/CSS21/propidx.html
+Selectors http://www.w3.org/TR/css3-selectors/
+CSS Reset http://www.developer.yahoo.com/yui/3/cssreset/
+		  http://www.meyerweb.com/eric/tools/css/reset/
+
+Styles from different sources 
+	Default Stylesheet (least weight) + User Stylesheet (more weight) + Author Stylesheet (most weight)
+
+Uses the last rule that applies to the element 
+In addition, the browser give each rule a specificity rating, the 
+higher the number the more important the rule is. 
+Specificity:
+	A: count of ID selectors 
+	B: count of class a attributes 
+	C: count of type selectors 
+
+	*		a=0 b=0 c=0 -> specificty = 0 *
+	LI		a=0 b=0 c=1 -> specificty = 1 list items, divs  
+	UL, LI  a=0 b=0 c=2 -> specificty = 2 child selector (>), list items in an unordered list 
+	LI, red a=0 b=1 c=1 -> specificty = 11 list items with a class attribute of red 
+	#content a=1 b=0 c=0 -> specificty = 100 items with id content, inline styles  
+				
+				Inheritance
+					HTML
+					BODY
+			H1	H2	IV	P	DIV
+							  P
+
+	font-size can be inherited and 
+	border-tyle cannot be inherited 
+	list-style can be inherited 
+	margins, family and border do not get inherited 
+
+select colors by finding a color picker site on the web
+***************
+A selector is a pattern used to apply styles to elements
+
+Selector {
+	propertyname:value;
+}
+
+***
+Use a pound sign to create an id selector 
+
+	#id {
+		propertyname:value;
+	}
+
+***
+class selector
+	.class {
+		propertyname:value;
+	}
+
+***
+decendant selector
+	element target {
+		propertyname:value;
+	}	
+	
+***
+child selector
+	element > element {
+		propertyname:value;
+	}
+	
+***
+attribute selector
+	img[...] {
+		propertyname:value;
+	}
+	
+***
+psuedo class selector
+	a:visited {
+		propertyname:value;
+	}
+	
+Keywords 
+- thin, thick, larger 
+
+Physical measurements 
+-inches (in) points (pt), picas (pc)
+
+Screen measurements 
+-pixels (px)
+
+Relative measurements 
+- %, em
+
+Color codes 
+-#rrggbb, rbg(r,g,b)
+
+Fonts
+-Helvitaca, san-serif, etc.
+
+Functional notation
+- rgb(r,g,b), url(:http://example.com/bg.jpg")
+
+
+h1, h2 {
+	background-color:#cccc99;
+}
+
+div {
+	background-color:#ff0000;
+}
+
+#content {
+	background-color:#00ff00;
+}
+
+.quotation {
+	background-color:#0000ff;
+}
+
+
+
+* /*everything matches and is white
+{
+	color:white;
+}
+
+body {
+	background-color:#cccc99;
+	/*background-image:url("bg.jpg");
+
+}
+
+p {
+	font-size:1.5em;
+	border-style:solid;
+	border-color:black;
+	border-width:2mm;
+	width:200px;
+}
+
+body > div{
+	background-color:red;
+}
+
+div{
+	background-color:black;
+}
+
+*{
+	background-color:green;
+}
+
+*/
+
+*{
+	padding:0px;
+	margin:0px;
+}
+
+body{
+	background-color:#cccccc;
+}
+
+.menu{
+	list-style:none;
+	text-align:center;
+}
+
+/*
+ul li:nth-child(3){
+	/*display:none; removes the nth-child element from the list
+	visibility:hidden; /*shows the space of the nth child with no content
+}
+*/
+
+.menu{
+	list-style:none;
+	text-align:center;
+}
+
+.menu li:hover{
+	background-color:#cc9999; /*does not work in old versions of internet explorer*, IE6 will have to use JS/
+}
+
+
+.menu li{
+	/*display:inline; display horizontal list that is static*/ 
+	display:inline-block; /*displays horizonal list that changes with size of window, cannot set the width of an inline element*/
+	width:150px;
+	text-align:center;
+	background-color: #cccc99;
+	border-bottom:3px solid #000000;
+	padding:3px 0 0 10px;
+}
+
+.menu li  a{
+	text-decoration:none; /*removes underline from URL*/
+	color: #000000;
+}
